@@ -48,6 +48,8 @@ export class Order extends Agregate {
         this._creditCard = creditCard;
         this._createdAt = new Date();
         this._items = new List<OrderItem>();
+        this._totalWithDiscount = 0;
+        this._total = 0;
 
         const contract: ValidationContract = new ValidationContract()
             .requires()
