@@ -1,0 +1,30 @@
+{
+  "name": "vocaldem-store",
+  "version": "1.0.0",
+  "description": "store of the course",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
+    "verify": ".\\node_modules\\.bin\\tslint .\\src\\**",
+    "test": "npm run verify && mocha -r ts-node/register tests/**/*.spec.ts"
+  },
+  "author": "nicolas",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^2.2.46",
+    "@types/node": "^9.3.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
+    "nodemon": "^1.14.10",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "fluent-validator-typescript": "^1.0.17",
+    "guid-typescript": "^1.0.7",
+    "linqts": "^1.10.0"
+  }
+}
