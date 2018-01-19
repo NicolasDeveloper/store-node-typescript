@@ -22,7 +22,10 @@ export class CreditCard extends ValueObject<CreditCard> {
             .hasMinLen(this._securityCode.toString(), 4, "security code", "o código de segurança está inválido!")
             .hasMaxLen(this._securityCode.toString(), 4, "security code", "o código de segurança está inválido!")
             .stringIsNotNullOrEmpty(this._validate, "validate", "a validade é obrigatória!")
-            .stringIsNotNullOrEmpty(this._printedName, "printedName", "o nome impresso no cartão é obrigatório!");
+            .stringIsNotNullOrEmpty(this._printedName, "printedName", "o nome impresso no cartão é obrigatório!")
+            .creditCardDateIsValid(this._validate, "validate", "a data está no formato inválido! formato: mm/yyyy")
+            .creditCardDateIsGreaterThanToday(this._validate, "validate", "a validade está expirada!")
+            .creditCardNumberIsValid(this._cardNumber, "number", "o numero do cartão está inválido!");
 
         this.addNotifications(contract.notifications);
     }

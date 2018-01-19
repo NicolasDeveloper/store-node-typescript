@@ -25,7 +25,7 @@ export class Period extends ValueObject<Period> {
         super();
 
         this._initial = initial;
-        this._final = initial;
+        this._final = final;
 
         const contract: ValidationContract = new ValidationContract()
             .requires()

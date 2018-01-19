@@ -23,7 +23,7 @@
     "typescript": "^2.6.2"
   },
   "dependencies": {
-    "fluent-validator-typescript": "^1.0.17",
+    "fluent-validator-typescript": "^1.0.21",
     "guid-typescript": "^1.0.7",
     "linqts": "^1.10.0"
   }
